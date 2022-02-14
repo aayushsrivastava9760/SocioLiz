@@ -1,0 +1,15 @@
+.feed{
+    flex:5.5;
+}
+
+.feedWrapper{
+    padding: 20px;
+}
+
+.msg{
+    font-weight: 500;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: #555;
+}

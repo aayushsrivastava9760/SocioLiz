@@ -8,6 +8,7 @@ A mern stack based social website .
 - Routing
 - redux (or authorization)
 - follow user--->follow up with a 'hi' message
+- show up messages like failed to login due to wrong password or something
 
 ## backend
 

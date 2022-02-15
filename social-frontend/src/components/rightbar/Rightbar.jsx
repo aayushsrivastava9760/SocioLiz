@@ -23,7 +23,7 @@ const Rightbar = ({user}) => {
     if(user){
       setFollowed(currentUser.following.includes(user._id))
     }
-  },[currentUser,user?._id])
+  },[currentUser,user])
 
   useEffect(()=>{
     if(user){

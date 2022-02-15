@@ -22,7 +22,7 @@ const Message = ({own,message}) => {
             }
         }
         getSender()
-    },[])
+    },[message.sender])
 
 
     return (

@@ -1,5 +1,5 @@
 # SocioLiz
-A mern stack based social website .
+A mern stack based social website . make sure to change the link before making it public .
 
 ### env files
 

@@ -20,7 +20,7 @@ const Conversation = ({conversation,currentUser}) => {
             }
         }
         getFriend()
-    },[])
+    },[conversation.members,currentUser._id])
 
     return (
         <div>

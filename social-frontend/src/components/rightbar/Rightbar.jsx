@@ -23,7 +23,7 @@ const Rightbar = ({user}) => {
     if(user){
       setFollowed(currentUser.following.includes(user._id))
     }
-  },[currentUser,user?._id])
+  },[currentUser,user])
 
   useEffect(()=>{
     if(user){
@@ -110,7 +110,7 @@ const Rightbar = ({user}) => {
           :
           friends.map(friend =>{
             return(
-              <Link to={`/profile/${friend.username}`} style={{textDecoration:"none"}} >
+              <Link key={friend._id} to={`/profile/${friend.username}`} style={{textDecoration:"none"}} >
                 <div className="rightbarFollowing">
                   <img className='rightbarFollowingImg' src={ friend.profilePicture ? PF+friend.profilePicture : PF + "person/noAvatar.png" } alt="" />
                   <span className="rightbarFollowingName">{friend.username}</span>

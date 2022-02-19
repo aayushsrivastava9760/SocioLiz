@@ -27,7 +27,8 @@ const Messenger = () => {
     const scrollRef = useRef()
 
     useEffect(()=>{
-        socket.current = io("ws://localhost:8900")
+        // socket.current = io("ws://localhost:8900")
+        socket.current = io("https://dry-cliffs-41954.herokuapp.com/")
         socket.current.on("getMessage", data =>{
             setArrivalMessage({
                 sender: data.senderId,

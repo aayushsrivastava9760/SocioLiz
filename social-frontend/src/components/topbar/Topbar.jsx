@@ -4,10 +4,19 @@ import { Search, Person, Chat, Notifications } from "@material-ui/icons"
 import {Link} from "react-router-dom"
 import { useContext } from 'react'
 import { AuthContext } from '../../context/AuthContext'
+import { logoutCall } from '../../apiCalls'
+
 
 const Topbar = () => {
 
     const {user} = useContext(AuthContext)
+
+    const {dispatch} = useContext(AuthContext)
+
+    const handleLogout = () =>{
+      logoutCall(dispatch)
+    }
+
 
     return (
       <div className='topbarContainer' >
@@ -46,6 +55,9 @@ const Topbar = () => {
           <Link to={`/profile/${user.username}`} style={{textDecoration:"none"}}>
             <img src={user.profilePicture || "/assets/person/noAvatar.png"} alt="profile pic" className="topbarImg" />
           </Link>
+          <div className="topbarLinks">
+            <button className="topbarLink" onClick={handleLogout} >Logout</button>
+          </div>
         </div>
       </div>
   )

@@ -20,4 +20,4 @@ A mern stack based social website . make sure to change the link before making i
 
 ## socket
 
-- deployment
+- Socket server deployed on Heroku `https://dry-cliffs-41954.herokuapp.com/`

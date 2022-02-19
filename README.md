@@ -6,14 +6,12 @@ A mern stack based social website . make sure to change the link before making i
 ## frontend
 
 - Routing
-- redux (or authorization)
 - follow user--->follow up with a 'hi' message
 - show up messages like failed to login due to wrong password or something
 - searching user
 
 ## backend
 
-- deployment of APIs on heroku
 - jwt (lets see)
 - better uploading of pictures
 - user search api

@@ -19,3 +19,4 @@ A mern stack based social website . make sure to change the link before making i
 ## socket
 
 - Socket server deployed on Heroku `https://dry-cliffs-41954.herokuapp.com/`
+- Heroku buildpack used for deplotment of socket server `https://github.com/timanovsky/subdir-heroku-buildpack`

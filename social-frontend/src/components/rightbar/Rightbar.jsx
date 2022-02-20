@@ -110,7 +110,7 @@ const Rightbar = ({user}) => {
           :
           friends.map(friend =>{
             return(
-              <Link key={friend._id} to={`/profile/${friend.username}`} style={{textDecoration:"none"}} >
+              <Link key={friend._id} to={`/profile/${friend.username}`} style={{textDecoration:"none",color:"black",textAlign:"center"}} >
                 <div className="rightbarFollowing">
                   <img className='rightbarFollowingImg' src={ friend.profilePicture ? PF+friend.profilePicture : PF + "person/noAvatar.png" } alt="" />
                   <span className="rightbarFollowingName">{friend.username}</span>

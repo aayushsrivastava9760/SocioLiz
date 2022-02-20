@@ -41,7 +41,7 @@ const Topbar = () => {
               <Person/>
               <span className="topbarIconBadge">1</span>
             </div>
-            <Link to={'/messenger'} style={{textDecoration:"none"}}>
+            <Link to={'/messenger'} style={{textDecoration:"none",color:"white"}}>
             <div className="topbarIconItem">
               <Chat/>
               <span className="topbarIconBadge">2</span>
@@ -55,8 +55,8 @@ const Topbar = () => {
           <Link to={`/profile/${user.username}`} style={{textDecoration:"none"}}>
             <img src={user.profilePicture || "/assets/person/noAvatar.png"} alt="profile pic" className="topbarImg" />
           </Link>
-          <div className="topbarLinks">
-            <button className="topbarLink" onClick={handleLogout} >Logout</button>
+          <div>
+            <button className="logoutButton" onClick={handleLogout} >Logout</button>
           </div>
         </div>
       </div>

@@ -55,7 +55,7 @@ const Post = ({post}) => {
           <div className="postTop">
               <div className="postTopLeft">
                 <Link to={`/profile/${user.username}`}>
-                  <img className='postProfileImg' src={ user.profilePicture ? PF+user.profilePicture : PF + "person/noAvatar.png" } alt="" />
+                  <img className='postProfileImg' src={ user.profilePicture ? PF+user.profilePicture : "/assets/person/noAvatar.png" } alt="" />
                 </Link>
                   <span className="postUsername">
                     {user.username}
@@ -68,7 +68,8 @@ const Post = ({post}) => {
           </div>
           <div className="postCenter">
               <span className="postText">{post?.desc}</span>
-              {post.img && <img className='postImg' src={ PF+post.img } alt="" />}
+              {/* {post.img && <img className='postImg' src={ PF+post.img } alt="" />} */}
+              {post.img && <img className='postImg' src={post.img.length > 100 ? post.img : PF+post.img} alt="" />}
           </div>
           <div className="postBottom">
               <div className="postBottomLeft">

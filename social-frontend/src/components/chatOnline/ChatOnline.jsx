@@ -41,7 +41,7 @@ const ChatOnline = ({onlineUsers,currentUserId,setCurrentChat}) => {
                 {onlinefriends.map(friend => (
                     <div className="chatOnlineFriend" onClick={()=>{handleClick(friend)}}>
                         <div className="chatOnlineImgContainer">
-                            <img className='chatOnlineImg' src={ friend?.profilePicture ? PF+friend.profilePicture : PF + "person/noAvatar.png" } alt="" />
+                            <img className='chatOnlineImg' src={ friend?.profilePicture ? PF+friend.profilePicture : "/assets/person/noAvatar.png" } alt="" />
                             <div className="chatOnlineBadge"></div>
                         </div>
                         <span className="chatOnlineName">{friend.username}</span>

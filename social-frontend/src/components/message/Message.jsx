@@ -32,11 +32,11 @@ const Message = ({own,message}) => {
                 own ?
                 <div className="messageTop">
                     <p className='messageText'>{message.text}</p>
-                    <img className='messageImgOwn' src={ sender?.profilePicture ? PF+sender.profilePicture : PF + "person/noAvatar.png" } alt="" />
+                    <img className='messageImgOwn' src={ sender?.profilePicture ? PF+sender.profilePicture : "/assets/person/noAvatar.png" } alt="" />
                 </div>
                 :
                 <div className="messageTop">
-                    <img className='messageImg' src={ sender?.profilePicture ? PF+sender.profilePicture : PF + "person/noAvatar.png" } alt="" />
+                    <img className='messageImg' src={ sender?.profilePicture ? PF+sender.profilePicture : "/assets/person/noAvatar.png" } alt="" />
                     <p className='messageText'>{message.text}</p>
                 </div>
                 }

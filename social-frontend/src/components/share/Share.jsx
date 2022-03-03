@@ -7,36 +7,41 @@ import { useRef } from 'react'
 import { useState } from 'react'
 import axios from "axios"
 
-
 const Share = () => {
 
   const {user} = useContext(AuthContext)
   const desc = useRef()
   const [file,setFile] = useState(null)
+//   const [imgUrl,setImgUrl] = useState("")
 
   const PF = process.env.REACT_APP_PUBLIC_FOLDER
 
   const submitHandler = async (e) => {
     e.preventDefault()
+
+    const base64 = await convertBase64(file)
+    // console.log(base64.toString());
+
     const newPost = {
         userId: user._id,
-        desc: desc.current.value
+        desc: desc.current.value,
+        img:base64.toString()
     }
 
-    if(file){
-        const data = new FormData()
-        const today = new Date()
-        const fileName = today.getDate() + '-' + today.getMonth() + '-' + today.getHours() + file.name
-        data.append("file",file)
-        data.append("name",fileName)
-        newPost.img = fileName
-        console.log(fileName);
-        try {
-            await axios.post("/upload",data)
-        } catch (error) {
-            console.log(error);
-        }
-    }
+    // if(file){
+    //     const data = new FormData()
+    //     const today = new Date()
+    //     const fileName = today.getDate() + '-' + today.getMonth() + '-' + today.getHours() + file.name
+    //     data.append("file",file)
+    //     data.append("name",fileName)
+    //     newPost.img = fileName
+    //     console.log(fileName);
+    //     try {
+    //         await axios.post("/upload",data)
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // }
 
     try {
         await axios.post("/posts",newPost)
@@ -47,12 +52,26 @@ const Share = () => {
     
   }
 
+  const convertBase64 = (imgFile) =>{
+      return new Promise((resolve,reject)=>{
+          const fileReader = new FileReader()
+          fileReader.readAsDataURL(imgFile)
+
+          fileReader.onload = () =>{
+            resolve(fileReader.result)
+          }
+
+          fileReader.onerror = (error) =>{
+            reject(error)
+          }
+      })
+  }
 
   return (
     <div className='share'>
       <div className="shareWrapper">
           <div className="shareTop">
-              <img className='shareProfileImg' src={user.profilePicture ? PF+user.profilePicture : PF + "person/noAvatar.png"} alt="" />
+              <img className='shareProfileImg' src={user.profilePicture ? PF+user.profilePicture : "/assets/person/noAvatar.png"} alt="" />
               <input 
                 placeholder={`what's in your mind ${user.username} ?`} 
                 className="shareInput" 

@@ -26,7 +26,7 @@ const Conversation = ({conversation,currentUser}) => {
         <div>
             {friend && 
             <div className="conversation">
-                <img className='conversationImg' src={ friend.profilePicture ? PF+friend.profilePicture : PF + "person/noAvatar.png" } alt="" />
+                <img className='conversationImg' src={ friend.profilePicture ? PF+friend.profilePicture : "/assets/person/noAvatar.png" } alt="" />
                 <span className="conversationName">{friend.username}</span>
             </div>
             }

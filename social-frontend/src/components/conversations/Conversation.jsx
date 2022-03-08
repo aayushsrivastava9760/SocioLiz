@@ -1,8 +1,10 @@
-import axios from 'axios'
+// import axios from 'axios'
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import "./conversation.css"
+import axios from '../../utils/axios'
+
 
 const Conversation = ({conversation,currentUser}) => {
     const PF = process.env.REACT_APP_PUBLIC_FOLDER

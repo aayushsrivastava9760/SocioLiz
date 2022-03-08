@@ -59,7 +59,8 @@ app.use("/api/posts",postRoute)
 app.use("/api/conversations",conversationRoute)
 app.use("/api/messages",messageRoute)
 
+const port = process.env.PORT || 8800
 
-app.listen(8800,()=>{
-    console.log(`Server is listening on port 8800 ...`)
+app.listen(port,()=>{
+    console.log(`Server is listening on port ${port} ...`)
 })

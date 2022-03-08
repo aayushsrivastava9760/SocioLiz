@@ -8,8 +8,10 @@ import { useContext } from 'react'
 import { AuthContext } from '../../context/AuthContext'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import axios from "axios"
+// import axios from "axios"
 import {io} from "socket.io-client"
+import axios from '../../utils/axios'
+
 
 
 

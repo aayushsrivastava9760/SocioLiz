@@ -4,11 +4,13 @@ import { Users } from '../../dummyData'
 import Online from '../online/Online'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import axios from "axios"
+// import axios from "axios"
 import {Link} from "react-router-dom"
 import { useContext } from 'react'
 import { AuthContext } from '../../context/AuthContext'
 import { Add, Remove } from '@material-ui/icons'
+import axios from '../../utils/axios'
+
 
 
 const Rightbar = ({user}) => {

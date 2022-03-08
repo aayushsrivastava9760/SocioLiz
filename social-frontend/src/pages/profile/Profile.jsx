@@ -4,8 +4,10 @@ import Rightbar from '../../components/rightbar/Rightbar'
 import Sidebar from '../../components/sidebar/Sidebar'
 import Topbar from '../../components/topbar/Topbar'
 import './profile.css'
-import axios from "axios"
+// import axios from "axios"
 import { useParams } from "react-router-dom"
+import axios from '../../utils/axios'
+
 
 
 const Profile = () => {

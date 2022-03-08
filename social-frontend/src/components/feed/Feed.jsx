@@ -3,9 +3,11 @@ import Post from '../post/Post'
 import Share from '../share/Share'
 import "./feed.css"
 // import { Posts } from '../../dummyData'
-import axios from 'axios'
+// import axios from 'axios'
 import { useContext } from 'react'
 import { AuthContext } from '../../context/AuthContext'
+import axios from '../../utils/axios'
+
 
 const Feed = ({username}) => {
   const [posts,setPosts] = useState([])

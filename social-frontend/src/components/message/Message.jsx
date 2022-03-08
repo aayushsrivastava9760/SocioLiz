@@ -5,7 +5,9 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 // import { useContext } from 'react'
 // import { AuthContext } from '../../context/AuthContext'
-import axios from 'axios'
+// import axios from 'axios'
+import axios from '../../utils/axios'
+
 
 const Message = ({own,message}) => {
     const PF = process.env.REACT_APP_PUBLIC_FOLDER

@@ -1,8 +1,10 @@
-import axios from 'axios'
+// import axios from 'axios'
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import "./chatOnline.css"
+import axios from '../../utils/axios'
+
 
 const ChatOnline = ({onlineUsers,currentUserId,setCurrentChat}) => {
     const PF = process.env.REACT_APP_PUBLIC_FOLDER

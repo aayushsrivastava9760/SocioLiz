@@ -12,33 +12,33 @@ A MERN stack based social website where users can post , follow others and chat 
 
 1. Clone the repo .
 
-`
+```
 git clone https://github.com/aayushsrivastava9760/SocioLiz.git
-`
+```
 
 2. Install the dependencies for the **Backend** .
 
-`
+```
 npm i
-`
+```
 
 3. Install the dependencies for the **Frontend** .
 
-`
+```
 cd social-frontend
-`
-`
+```
+```
 npm i
-`
+```
 
 4. Install the dependencies for the **socket** .
 
-`
+```
 cd socket
-`
-`
+```
+```
 npm i
-`
+```
 
 
 ## frontend

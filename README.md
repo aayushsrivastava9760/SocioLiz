@@ -26,8 +26,6 @@ npm i
 
 ```
 cd social-frontend
-```
-```
 npm i
 ```
 
@@ -35,8 +33,6 @@ npm i
 
 ```
 cd socket
-```
-```
 npm i
 ```
 
@@ -72,6 +68,15 @@ npm start
 cd social-frontend
 npm start
 ```
+
+## Author
+
+- **Aayush Srivastava**
+
+### Aknowledgements
+
+- Heroku buildpack used for deplotment of socket server [timanovsky/subdir-heroku-buildpack](https://github.com/timanovsky/subdir-heroku-buildpack)
+- Inspired by [Safak](https://github.com/safak)
 
 ## frontend
 

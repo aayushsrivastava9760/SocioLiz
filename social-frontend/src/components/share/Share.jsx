@@ -21,13 +21,40 @@ const Share = () => {
   const submitHandler = async (e) => {
     e.preventDefault()
 
-    const base64 = await convertBase64(file)
-    // console.log(base64.toString());
+    if(file){
+      const base64 = await convertBase64(file)
+      console.log(base64.toString());
 
-    const newPost = {
-        userId: user._id,
-        desc: desc.current.value,
-        img:base64.toString()
+      const newPost = {
+          userId: user._id,
+          desc: desc.current.value,
+          img:base64.toString()
+      }
+
+      // console.log(newPost);
+      
+      try {
+        await axios.post("/posts",newPost)
+        window.location.reload()
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    // const base64 = await convertBase64(file)
+    // console.log(base64.toString());
+    else{
+      const newPost = {
+          userId: user._id,
+          desc: desc.current.value,
+      }
+
+      try {
+        await axios.post("/posts",newPost)
+        window.location.reload()
+      } catch (error) {
+        console.log(error);
+      }
     }
 
     // if(file){
@@ -45,12 +72,12 @@ const Share = () => {
     //     }
     // }
 
-    try {
-        await axios.post("/posts",newPost)
-        window.location.reload()
-    } catch (error) {
-        console.log(error);
-    }
+    // try {
+    //     await axios.post("/posts",newPost)
+    //     window.location.reload()
+    // } catch (error) {
+    //     console.log(error);
+    // }
     
   }
 

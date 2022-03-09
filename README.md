@@ -1,7 +1,45 @@
 # SocioLiz
-A mern stack based social website . make sure to change the link before making it public .
+A MERN stack based social website where users can post , follow others and chat with them .
 
-### env files
+## Getting Started
+
+### Prerequisites
+
+1. Must have basic knowledge of **Node**, **React**, **Express**, **MongoDB** .
+2. Basic idea about **socketio** .
+
+### Installing
+
+1. Clone the repo .
+
+`
+git clone https://github.com/aayushsrivastava9760/SocioLiz.git
+`
+
+2. Install the dependencies for the **Backend** .
+
+`
+npm i
+`
+
+3. Install the dependencies for the **Frontend** .
+
+`
+cd social-frontend
+`
+`
+npm i
+`
+
+4. Install the dependencies for the **socket** .
+
+`
+cd socket
+`
+`
+npm i
+`
+
 
 ## frontend
 

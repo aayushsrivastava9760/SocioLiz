@@ -78,20 +78,8 @@ npm start
 - Heroku buildpack used for deplotment of socket server [timanovsky/subdir-heroku-buildpack](https://github.com/timanovsky/subdir-heroku-buildpack)
 - Inspired by [Safak](https://github.com/safak)
 
-## frontend
+### Resources
 
-- Routing
-- follow user--->follow up with a 'hi' message
-- show up messages like failed to login due to wrong password or something
-- searching user
-
-## backend
-
-- jwt (lets see)
-- better uploading of pictures
-- user search api
-
-## socket
-
-- Socket server deployed on Heroku `https://dry-cliffs-41954.herokuapp.com/`
-- Heroku buildpack used for deplotment of socket server `https://github.com/timanovsky/subdir-heroku-buildpack`
+- https://axios-http.com/docs/intro
+- https://socket.io/get-started/chat
+- https://levelup.gitconnected.com/how-to-deploy-a-react-app-with-netlify-set-up-continuous-deployment-via-github-53859dcdaf40

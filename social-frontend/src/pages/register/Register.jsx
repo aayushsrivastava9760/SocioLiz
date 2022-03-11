@@ -30,7 +30,7 @@ const Register = () => {
 
       try {
         await axios.post("/auth/register",user)
-        console.log("lol");
+        console.log("user registered");
         navigate("/login")
       } catch (error) {
         console.log(error);

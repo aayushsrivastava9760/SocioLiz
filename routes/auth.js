@@ -8,14 +8,20 @@ const bcrypt = require('bcrypt')
 router.post("/register", async (req,res)=>{
     try {
         // generate hashed password
-        const salt = await bcrypt.genSalt(10)
-        const hashedPassword = await bcrypt.hash(req.body.password, salt)
+        // const salt = await bcrypt.genSalt(10)
+        // const hashedPassword = await bcrypt.hash(req.body.password, salt)
 
         // create new user 
+        // const newUser = new User({
+        //     username:req.body.username,
+        //     email:req.body.email,
+        //     password:hashedPassword,
+        // })
+
         const newUser = new User({
             username:req.body.username,
             email:req.body.email,
-            password:hashedPassword,
+            password:req.body.password,
         })
 
         // save user and respond
@@ -36,10 +42,16 @@ router.post("/login", async (req,res)=>{
         //     res.status(404).send("user not found")
         // }
 
-        const validPassword = await bcrypt.compare(req.body.password, user.password)
-        !validPassword && res.status(400).send("Invalid Password")
+        // const validPassword = await bcrypt.compare(req.body.password, user.password)
+        // !validPassword && res.status(400).send("Invalid Password")
 
-        res.status(200).json(user)
+        if(req.body.password === user.password){
+            res.status(200).json(user)
+        }
+
+        res.status(400).send("Invalid Password")
+
+        // res.status(200).json(user)
     } catch (error) {
         res.status(500).json(error)
     }

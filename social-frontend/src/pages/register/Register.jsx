@@ -17,6 +17,7 @@ const Register = () => {
 
   const handleSubmit = async (e) =>{
     e.preventDefault()
+    
 
     if(password.current.value !== passwordAgain.current.value){
       passwordAgain.current.setCustomValidity("Passwords don't match!")

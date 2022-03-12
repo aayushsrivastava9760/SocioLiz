@@ -1,9 +1,34 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import "./sidebar.css"
 import {RssFeed, School, Event, WorkOutline, HelpOutline, Bookmark, Group, PlayCircleFilledOutlined, Chat} from '@material-ui/icons'
-import { Users } from '../../dummyData'
+// import { Users } from '../../dummyData'
 import CloseFriend from '../closeFriend/CloseFriend'
+import axios from '../../utils/axios'
+import { AuthContext } from '../../context/AuthContext'
+
 const Sidebar = () => {
+
+  const {user} = useContext(AuthContext)
+  const [friends,setFriends] = useState([])
+
+  useEffect(()=>{
+    const getFriends = async () =>{
+      try {
+        if(user._id){
+          const friendList = await axios.get(`/users/friends/${user._id}`)
+          setFriends(friendList.data)
+        }
+        else{
+          setFriends([])
+        }
+
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getFriends()
+  },[user])
+
   return (
     <div className='sidebar'>
       <div className="sidebarWrapper">
@@ -68,8 +93,8 @@ const Sidebar = () => {
         </button>
         <hr className='sidebarHr' />
         <ul className="sidebarFriendList">
-          {Users.map(u=>(
-            <CloseFriend key={u.id} user={u} />
+          {friends.map(u=>(
+            <CloseFriend key={u._id} user={u} />
           ))}
         </ul>
       </div>

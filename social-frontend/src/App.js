@@ -28,10 +28,10 @@ function App() {
         <Route path="/register" element={user ? <Navigate to="/" /> : <Register />} />
         
         {/* <Route path="/messenger" element={!user ? <Navigate to="/" /> : <Messenger />} /> */}
-        <Route path="/messenger" element={<Messenger />} />
+        <Route path="/messenger" element={!user ? <Navigate to="/" /> : <Messenger />} />
 
         {/* </Route> */}
-        <Route path="/profile/:username" element={<Profile />}/>
+        <Route path="/profile/:username" element={!user ? <Navigate to="/" /> : <Profile />}/>
           
         {/* </Route> */}
       </Routes>

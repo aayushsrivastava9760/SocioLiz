@@ -31,8 +31,15 @@ const Rightbar = ({user}) => {
     if(user){
       const getFriends = async () =>{
         try {
-          const friendList = await axios.get(`/users/friends/${user._id}`)
-          setFriends(friendList.data)
+
+          if(user._id){
+            const friendList = await axios.get(`/users/friends/${user._id}`)
+            setFriends(friendList.data)
+          }
+          else{
+            setFriends([])
+          }
+
         } catch (error) {
           console.log(error);
         }

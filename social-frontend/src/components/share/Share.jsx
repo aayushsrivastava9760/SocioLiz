@@ -23,7 +23,7 @@ const Share = () => {
 
     if(file){
       const base64 = await convertBase64(file)
-      console.log(base64.toString());
+      // console.log(base64.toString());
 
       const newPost = {
           userId: user._id,

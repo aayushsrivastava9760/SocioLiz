@@ -1,5 +1,24 @@
 # SocioLiz
+
 A MERN stack based social website where users can post , follow others and chat with them .
+
+### Features
+
+1. Users can **register** and **login** .
+2. Uses **hashed password** which are more reliable and safe .
+3. Users can make **posts** , **follow/unfollow** other users and **realtime chat** with friends .
+4. Users can also **post images** .
+
+### Packages
+
+- [express](https://expressjs.com/)
+- [mongoose](https://mongoosejs.com/docs/)
+- [cors](https://expressjs.com/en/resources/middleware/cors.html)
+- [dotenv](https://www.npmjs.com/package/dotenv)
+- [bcrypt](https://www.npmjs.com/package/bcrypt)
+- [socket.io](https://socket.io/)
+- [socket.io-client](https://www.npmjs.com/package/socket.io-client)
+- [axios](https://axios-http.com/docs/intro)
 
 ## Getting Started
 
@@ -7,6 +26,7 @@ A MERN stack based social website where users can post , follow others and chat 
 
 1. Must have basic knowledge of **Node**, **React**, **Express**, **MongoDB** .
 2. Basic idea about **socketio** .
+3. Familiarity with **npm** and **npm packages** .
 
 ### Installing
 
@@ -83,3 +103,4 @@ npm start
 - https://axios-http.com/docs/intro
 - https://socket.io/get-started/chat
 - https://levelup.gitconnected.com/how-to-deploy-a-react-app-with-netlify-set-up-continuous-deployment-via-github-53859dcdaf40
+- https://masteringjs.io/tutorials/mongoose/find

@@ -181,5 +181,19 @@ router.patch("/:id/unfollow", async (req,res)=>{
     }
 })
 
+// get users with similar usernames
+
+router.get('/search/:username', async (req,res)=>{
+    try {
+        const users = await User.find({
+            username: {$regex: req.params.username}
+        })
+
+        res.status(200).json(users)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
+
 
 module.exports = router

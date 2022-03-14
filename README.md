@@ -8,6 +8,7 @@ A MERN stack based social website where users can post , follow others and chat 
 2. Uses **hashed password** which are more reliable and safe .
 3. Users can make **posts** , **follow/unfollow** other users and **realtime chat** with friends .
 4. Users can also **post images** .
+5. Users can **search** for other users.
 
 ### Packages
 

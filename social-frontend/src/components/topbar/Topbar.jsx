@@ -26,10 +26,12 @@ const Topbar = () => {
           </Link>
         </div>
         <div className="topbarCenter">
-          <div className="searchbar">
-            <Search className='searchIcon' />
-            <input placeholder='Search for friend, post or video' className="searchInput" />
-          </div>
+          <Link to={'/search'} style={{textDecoration:"none",color:'black'}} >
+            <div className="searchbar">
+              <Search className='searchIcon' />
+              <div className="searchText" >Search for friend, post or video</div>
+            </div>
+          </Link>
         </div>
         <div className="topbarRight">
           <div className="topbarLinks">

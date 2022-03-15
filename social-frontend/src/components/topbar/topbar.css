@@ -32,6 +32,7 @@
     border-radius: 30px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .searchIcon{
@@ -39,9 +40,16 @@
     margin-left: 10px;
 }
 
-.searchInput{
+/* .searchInput{
     border: none;
     width: 70%;
+} */
+
+.searchText{
+    color: gray;
+    font-size: 15px;
+    width: 70%;
+    /* margin-left: 50%; */
 }
 
 .searchInput:focus{

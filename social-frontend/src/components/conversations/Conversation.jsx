@@ -7,7 +7,6 @@ import axios from '../../utils/axios'
 
 
 const Conversation = ({conversation,currentUser}) => {
-    const PF = process.env.REACT_APP_PUBLIC_FOLDER
     const [friend,setFriend] = useState(null)
 
     useEffect(()=>{
@@ -28,7 +27,7 @@ const Conversation = ({conversation,currentUser}) => {
         <div>
             {friend && 
             <div className="conversation">
-                <img className='conversationImg' src={ friend.profilePicture ? PF+friend.profilePicture : "/assets/person/noAvatar.png" } alt="" />
+                <img className='conversationImg' src={ friend.profilePicture || "/assets/person/noAvatar.png" } alt="" />
                 <span className="conversationName">{friend.username}</span>
             </div>
             }

@@ -8,7 +8,7 @@ import { useState } from 'react'
 import {Link} from "react-router-dom"
 import { useContext } from 'react'
 import { AuthContext } from '../../context/AuthContext'
-import { Add, Remove } from '@material-ui/icons'
+import { Add, Remove, AddComment } from '@material-ui/icons'
 import axios from '../../utils/axios'
 
 
@@ -16,10 +16,10 @@ import axios from '../../utils/axios'
 const Rightbar = ({user}) => {
 
   const [friends, setFriends] = useState([])
-  const PF = process.env.REACT_APP_PUBLIC_FOLDER
   const {user:currentUser , dispatch} = useContext(AuthContext)
   // const [followed,setFollowed] = useState(currentUser.following.includes(user?._id))
   const [followed,setFollowed] = useState()
+  const [greet,setGreet] = useState(true)
 
   useEffect(()=>{
     if(user){
@@ -48,6 +48,27 @@ const Rightbar = ({user}) => {
     }
   },[user])
 
+
+  useEffect(()=>{
+    if(user){
+
+      const getConversations = async () =>{
+        try {
+          const res = await axios.get(`/conversations/find/${currentUser._id}/${user._id}`)
+          if(res.data){
+            setGreet(false)
+          }
+          else{
+            setGreet(true)
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      }
+      getConversations()
+    }
+  },[currentUser,user])
+
   const handleFollow = async () =>{
     if(user){
       try {
@@ -63,6 +84,36 @@ const Rightbar = ({user}) => {
         console.log(error);
       }
       setFollowed(!followed)
+    }
+  }
+
+  const handleGreetingMsg = async () =>{
+    // console.log("say hi pressed");
+    try {
+      const conversationData = {
+        senderId:currentUser._id,
+        receiverId:user._id
+      }
+
+      const newConversation = await axios.post('/conversations',conversationData)
+      setGreet(false)
+      console.log(newConversation);
+      // try {
+      //   const greetMessageData = {
+      //     conversationId:newConversation._id,
+      //     sender:currentUser._id,
+      //     text:""
+      //   }
+
+      //   const res = await axios.post('/messages',greetMessageData)
+        
+      //   console.log(res.data);
+      // } catch (error) {
+      //   console.log(error);
+      // }
+
+    } catch (error) {
+      console.log(error);
     }
   }
   
@@ -91,10 +142,20 @@ const Rightbar = ({user}) => {
     return(
       <div>
         { currentUser.username !== user.username && (
-          <button className="rightbarFollowButton" onClick={handleFollow} >
-            {followed ? "Unfollow" : "Follow"}
-            {followed ? <Remove /> : <Add />}
-          </button>
+          <div className='rightbarProfileButtonWrapper'>
+            <button className="rightbarFollowButton" onClick={handleFollow} >
+              {followed ? "Unfollow" : "Follow"}
+              {followed ? <Remove /> : <Add />}
+            </button>
+            {
+              greet && (
+              <button className="rightbarMessageButton" onClick={handleGreetingMsg}>
+                Add on messenger 
+                <AddComment style={{marginLeft:"5px"}} />
+              </button>
+              )
+            }
+          </div>
         )}
         <h4 className='rightbarTitle' >User Information</h4>
         <div className="rightbarInfo">
@@ -121,7 +182,7 @@ const Rightbar = ({user}) => {
             return(
               <Link key={friend._id} to={`/profile/${friend.username}`} style={{textDecoration:"none",color:"black",textAlign:"center"}} >
                 <div className="rightbarFollowing">
-                  <img className='rightbarFollowingImg' src={ friend.profilePicture ? PF+friend.profilePicture : "/assets/person/noAvatar.png" } alt="" />
+                  <img className='rightbarFollowingImg' src={ friend.profilePicture || "/assets/person/noAvatar.png" } alt="" />
                   <span className="rightbarFollowingName">{friend.username}</span>
                 </div>
               </Link>

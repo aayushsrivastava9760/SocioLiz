@@ -2,7 +2,8 @@ const port = process.env.PORT || 8900
 
 const io = require("socket.io")(port,{
     cors:{
-        origin:"http://localhost:3000"
+        // origin:"http://localhost:3000"
+        origin:"https://socioliz.netlify.app/"
     }
 })
 

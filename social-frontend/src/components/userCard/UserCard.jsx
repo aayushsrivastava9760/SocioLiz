@@ -8,7 +8,7 @@ const UserCard = ({user}) => {
       <div className='userCard'>
         <div className="userCardWrapper">
           <div>
-          <img className='userCardProfilePicture' src={profilePicture || "/assets/person/noAvatar.png"} />
+          <img className='userCardProfilePicture' src={profilePicture || "/assets/person/noAvatar.png"} alt={username} />
           </div>
           <div className="userCardInfo">
             <span className='userCardUsername'>{username}</span>

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './userCard.css'
 
+
 const UserCard = ({user}) => {
   const {username,profilePicture,desc} = user
     return (

@@ -65,7 +65,7 @@ MONGO_URL=<your_connection_string>
 
 6. Navigate to `social-frontend/src/utils/constants` and replace `https://socioliz-api.herokuapp.com/api` with `http://localhost:8800/api` .
 
-7. Navigate to `social-frontend/src/pages/messenger/Messenger` and replace `https://dry-cliffs-41954.herokuapp.com/` with `ws://localhost:8900` .
+7. Navigate to `social-frontend/src/pages/messenger/Messenger` and replace `https://socioliz-socket.herokuapp.com/` with `ws://localhost:8900` .
 
 
 ### Running Locally

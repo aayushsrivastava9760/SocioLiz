@@ -11,9 +11,21 @@ A MERN stack social PWA(Progressive Web App) where users can post , follow other
 The app has been hosted on Netlify [here](https://socioliz.netlify.app/) . P.S: You might have to wait for a few seconds for the netlify site to respond.
 
 ![Login Page](https://user-images.githubusercontent.com/81965095/159630405-c77ca550-5cec-4562-b15f-35e5f83e4b7d.jpeg)
+
+<hr>
+
 ![Register Page](https://user-images.githubusercontent.com/81965095/159630665-dc110ba0-87eb-4619-9c60-1fd3a909d8de.jpeg)
+
+<hr>
+
 ![Home Page](https://user-images.githubusercontent.com/81965095/159632335-899304dc-d62f-450b-9c79-be2ff93ab648.jpeg)
+
+<hr>
+
 ![Profile Page](https://user-images.githubusercontent.com/81965095/159632801-5d05fc4e-0e7b-4ab3-aaa6-7ae21fa97564.jpeg)
+
+<hr>
+
 ![Messenger Page](https://user-images.githubusercontent.com/81965095/159632947-aa99a21f-3580-42d5-a0b4-a23eca221d31.jpeg)
 
 

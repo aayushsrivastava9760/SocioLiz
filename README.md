@@ -1,6 +1,27 @@
 # SocioLiz
 
-A MERN stack based social website where users can post , follow others and chat with them .
+A MERN stack social PWA(Progressive Web App) where users can post , follow others and chat with them .
+
+![Netlify](https://pyheroku-badge.herokuapp.com/?app=mern-blog-it&path=/&style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/aayushsrivastava9760/SozioLiz?style=flat-square)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+## Demo
+
+The app has been hosted on Netlify [here](https://socioliz.netlify.app/) . P.S: You might have to wait for a few seconds for the netlify site to respond.
+
+<p align="center">
+    <img alt='login page' src="https://user-images.githubusercontent.com/81965095/159630405-c77ca550-5cec-4562-b15f-35e5f83e4b7d.jpeg" width="534" height="300" />
+</p>
+
+![Login Page](https://user-images.githubusercontent.com/81965095/159630405-c77ca550-5cec-4562-b15f-35e5f83e4b7d.jpeg)
+![Register Page](https://user-images.githubusercontent.com/81965095/159630665-dc110ba0-87eb-4619-9c60-1fd3a909d8de.jpeg)
+![Home Page](https://user-images.githubusercontent.com/81965095/159632335-899304dc-d62f-450b-9c79-be2ff93ab648.jpeg)
+![Profile Page](https://user-images.githubusercontent.com/81965095/159632801-5d05fc4e-0e7b-4ab3-aaa6-7ae21fa97564.jpeg)
+![Messenger Page](https://user-images.githubusercontent.com/81965095/159632947-aa99a21f-3580-42d5-a0b4-a23eca221d31.jpeg)
+
+
+
 
 ### Features
 

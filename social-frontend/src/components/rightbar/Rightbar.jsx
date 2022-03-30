@@ -1,6 +1,6 @@
 import React from 'react'
 import "./rightbar.css"
-import { Users } from '../../dummyData'
+import { Users } from '../../utils/data/dummyData'
 import Online from '../online/Online'
 import { useEffect } from 'react'
 import { useState } from 'react'

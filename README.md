@@ -37,6 +37,7 @@ The app has been hosted on Netlify [here](https://socioliz.netlify.app/) . P.S: 
 3. Users can make **posts** , **follow/unfollow** other users and **realtime chat** with friends .
 4. Users can also **post images** .
 5. Users can **search** for other users.
+6. Users can change their **Profile Picture** and enter **Details** about themelves .
 
 ### Packages
 

@@ -2,7 +2,6 @@
 
 A MERN stack social PWA(Progressive Web App) where users can post , follow others and chat with them .
 
-![Netlify](https://pyheroku-badge.herokuapp.com/?app=mern-blog-it&path=/&style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/aayushsrivastava9760/SozioLiz?style=flat-square)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 

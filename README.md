@@ -17,15 +17,15 @@ The app has been hosted on Netlify [here](https://socioliz.netlify.app/) . P.S: 
 
 <hr>
 
-![Home Page](https://user-images.githubusercontent.com/81965095/159632335-899304dc-d62f-450b-9c79-be2ff93ab648.jpeg)
+![Home Page](https://user-images.githubusercontent.com/81965095/161415419-619c4f17-851f-4a00-8a17-d1ef52081f5b.jpeg)
 
 <hr>
 
-![comments](https://user-images.githubusercontent.com/81965095/161246061-8d4ec5b0-5835-4df8-807a-b1d55eb5f916.jpeg)
+![comments](https://user-images.githubusercontent.com/81965095/161415500-9a27544b-9018-474a-b892-778f84d11c50.jpeg)
 
 <hr>
 
-![Profile Page](https://user-images.githubusercontent.com/81965095/159632801-5d05fc4e-0e7b-4ab3-aaa6-7ae21fa97564.jpeg)
+![User's Profile Page](https://user-images.githubusercontent.com/81965095/161415549-bcbc88be-dd6b-46d7-b142-5df93f412b11.jpeg)
 
 <hr>
 
@@ -97,7 +97,7 @@ npm i
 MONGO_URL=<your_connection_string>
 ```
 
-6. Navigate to `social-frontend/src/utils/constants` and replace `https://socioliz-api.herokuapp.com/api` with `http://localhost:8800/api` .
+6. Navigate to `social-frontend/src/utils/constants` and replace `https://api-socioliz.herokuapp.com/api` with `http://localhost:8800/api` .
 
 7. Navigate to `social-frontend/src/pages/messenger/Messenger` and replace `https://socioliz-socket.herokuapp.com/` with `ws://localhost:8900` .
 

@@ -3,6 +3,7 @@ import React, { useRef } from 'react'
 import './register.css'
 import {Link} from "react-router-dom"
 import axios from '../../utils/axios'
+import { useNavigate } from "react-router-dom"
 
 
 
@@ -12,6 +13,8 @@ const Register = () => {
   const email = useRef()
   const password = useRef()
   const passwordAgain = useRef()
+
+  const navigate = useNavigate()
 
   const handleSubmit = async (e) =>{
     e.preventDefault()
@@ -30,7 +33,7 @@ const Register = () => {
       try {
         await axios.post("/auth/register",user)
         console.log("user registered");
-        // navigate("/login")
+        navigate("/login")
 
         // changes
 

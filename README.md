@@ -118,7 +118,7 @@ MONGO_URL=<your_connection_string>
 npm start
 ```
 
-2. Start the sokcet server .
+2. Start the socket server .
 
 ```
 cd socket

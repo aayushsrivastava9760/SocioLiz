@@ -33,6 +33,7 @@ const Register = () => {
       try {
         await axios.post("/auth/register",user)
         console.log("user registered");
+
         navigate("/login")
 
         // changes

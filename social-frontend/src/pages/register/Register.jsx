@@ -1,24 +1,18 @@
 // import axios from 'axios'
-import React, { useContext, useRef } from 'react'
+import React, { useRef } from 'react'
 import './register.css'
 import { useNavigate } from "react-router-dom"
 import {Link} from "react-router-dom"
 import axios from '../../utils/axios'
-import { AuthContext } from '../../context/AuthContext'
-import { loginCall } from '../../apiCalls'
 
 
 
 const Register = () => {
 
-  const { isFetching , dispatch } = useContext(AuthContext)
-
   const username = useRef()
   const email = useRef()
   const password = useRef()
   const passwordAgain = useRef()
-
-  const navigate = useNavigate()
 
   const handleSubmit = async (e) =>{
     e.preventDefault()

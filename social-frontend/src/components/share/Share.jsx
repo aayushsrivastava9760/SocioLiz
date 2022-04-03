@@ -16,8 +16,6 @@ const Share = () => {
   const [file,setFile] = useState(null)
 //   const [imgUrl,setImgUrl] = useState("")
 
-  const PF = process.env.REACT_APP_PUBLIC_FOLDER
-
   const submitHandler = async (e) => {
     e.preventDefault()
 

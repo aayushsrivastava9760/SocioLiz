@@ -12,7 +12,6 @@ import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 import Messenger from "./pages/messenger/Messenger";
 import Search from "./pages/search/Search";
-import Details from "./pages/Details/Details";
 
 function App() {
 

@@ -1,7 +1,5 @@
 import React, { useRef } from 'react'
 import "./rightbar.css"
-import { Users } from '../../utils/data/dummyData'
-import Online from '../online/Online'
 import { useEffect } from 'react'
 import { useState } from 'react'
 // import axios from "axios"

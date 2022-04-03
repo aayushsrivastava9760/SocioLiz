@@ -29,7 +29,15 @@ The app has been hosted on Netlify [here](https://socioliz.netlify.app/) . P.S: 
 
 <hr>
 
-![Messenger Page](https://user-images.githubusercontent.com/81965095/159632947-aa99a21f-3580-42d5-a0b4-a23eca221d31.jpeg)
+![Others Profile Page](https://user-images.githubusercontent.com/81965095/161416133-97c95b9e-b279-4da9-ac4c-e96fa2fcab4c.jpeg)
+
+<hr>
+
+![Search Page](https://user-images.githubusercontent.com/81965095/161416162-660d3971-1ffe-48d3-891b-bcaf8d177683.jpeg)
+
+<hr>
+
+![Messenger Page](https://user-images.githubusercontent.com/81965095/161416192-9230f7e8-2d8e-4f0a-8afb-8c5f0e38b27f.jpeg)
 
 
 

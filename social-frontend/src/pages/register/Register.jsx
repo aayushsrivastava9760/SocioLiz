@@ -1,19 +1,17 @@
 // import axios from 'axios'
 import React, { useRef } from 'react'
 import './register.css'
-import { useNavigate } from "react-router-dom"
 import {Link} from "react-router-dom"
 import axios from '../../utils/axios'
 
 
 
 const Register = () => {
+
   const username = useRef()
   const email = useRef()
   const password = useRef()
   const passwordAgain = useRef()
-
-  const navigate = useNavigate()
 
   const handleSubmit = async (e) =>{
     e.preventDefault()
@@ -31,8 +29,7 @@ const Register = () => {
 
       try {
         await axios.post("/auth/register",user)
-        console.log("lol");
-        navigate("/login")
+        console.log("user registered");
       } catch (error) {
         console.log(error);
       }

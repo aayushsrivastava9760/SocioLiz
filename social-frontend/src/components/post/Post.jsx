@@ -6,6 +6,7 @@ import {format} from "timeago.js"
 import {Link} from "react-router-dom"
 import { AuthContext } from '../../context/AuthContext'
 import axios from '../../utils/axios'
+import Comments from '../comments/Comments'
 
 
 
@@ -13,6 +14,7 @@ const Post = ({post}) => {
 
   const [like,setLike] = useState(post.likes.length)
   const [isLiked,setIsLiked] = useState(false)
+  const [seeComments,setSeeComments] = useState(false)
   const [user,setUser] = useState({})
 
   const {user:currentUser} = useContext(AuthContext)
@@ -48,8 +50,6 @@ const Post = ({post}) => {
     }
     
   }
-
-  // console.log(post.userId,post.likes);
   
   return (
     <div className='post'>
@@ -57,7 +57,7 @@ const Post = ({post}) => {
           <div className="postTop">
               <div className="postTopLeft">
                 <Link to={`/profile/${user.username}`}>
-                  <img className='postProfileImg' src={ user.profilePicture ? PF+user.profilePicture : "/assets/person/noAvatar.png" } alt="" />
+                  <img className='postProfileImg' src={ user.profilePicture ? user.profilePicture : "/assets/person/noAvatar.png" } alt="" />
                 </Link>
                   <span className="postUsername">
                     {user.username}
@@ -79,11 +79,18 @@ const Post = ({post}) => {
                   <img className='likeIcon' src="/assets/heart.png" onClick={likeHandler} alt="" />
                   <span className="postLikeCounter">{like} people like it</span>  
               </div>
-              <div className="postBottomRight">
-                  <span className="postCommentText">{post.comment} comments</span>
-              </div>
+              {
+                seeComments
+                ||
+                <div className="postBottomRight" onClick={()=>setSeeComments(true)}>
+                  <span className="postCommentText">comments</span>
+                </div>
+              }
           </div>
       </div>
+      {
+        seeComments && <Comments post={post} />
+      }
     </div>
   )
 }

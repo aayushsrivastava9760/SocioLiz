@@ -11,6 +11,8 @@ import { useEffect } from 'react'
 // import axios from "axios"
 import {io} from "socket.io-client"
 import axios from '../../utils/axios'
+import { Send } from "@material-ui/icons"
+
 
 
 
@@ -65,7 +67,8 @@ const Messenger = () => {
     },[user._id])
 
     useEffect(()=>{
-        if(currentChat){const getMessages = async () =>{
+        if(currentChat){
+            const getMessages = async () =>{
             try {
                 const res = await axios.get(`/messages/${currentChat._id}`)
                 setMessages(res.data)
@@ -133,14 +136,14 @@ const Messenger = () => {
                                 ))}
                             </div>
                             <div className="chatBoxBottom">
-                                <textarea 
+                                <input 
                                     className='chatMessageInput' 
                                     placeholder='write something...' 
                                     onChange={(e)=>setNewMessage(e.target.value)} 
                                     value={newMessage}
-                                >
-                                </textarea>
-                                <button className='chatSubmitButton' onClick={handleSubmit}>Send</button>
+                                />
+                                {/* </textarea> */}
+                                <button className='chatSubmitButton' onClick={handleSubmit}><Send /></button>
                             </div>
                         </>
                         :

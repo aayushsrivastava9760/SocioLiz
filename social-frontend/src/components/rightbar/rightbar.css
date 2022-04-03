@@ -26,6 +26,22 @@
     width: 100%;
     border-radius: 10px;
     margin: 30px 0;
+    border: 1px solid lightgray;
+}
+
+.rightbarTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rightbarEditIcon{
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.rightbarEditIcon:hover{
+    opacity: 0.5;
 }
 
 .rightbarTitle{
@@ -50,6 +66,8 @@
 
 .rightbarInfoItem{
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .rightbarInfoKey{
@@ -60,6 +78,46 @@
 
 .rightbarInfoValue{
     font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+
+.infoEditWrapper{
+    display: flex;
+    align-items: center;
+}
+
+.infoInput{
+    border: 1px solid gray;
+    padding: 1px;
+    border-radius: 3px;
+    width: 150px;
+}
+
+.infoInput:focus{
+    outline: none;
+}
+
+.infoEditButton{
+    border: none;
+    padding: 0px;
+    background-color: white;
+    cursor: pointer;
+    color: lightgray;
+}
+
+.infoEditButton:hover{
+    color: gray;
+}
+
+.infoEditIcon{
+    margin-left: 10px;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.infoEditIcon:hover{
+    opacity: 0.5;
 }
 
 .rightbarFollowings{

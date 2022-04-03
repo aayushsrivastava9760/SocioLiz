@@ -30,12 +30,80 @@
     border: 3px solid white;
 }
 
+.editIconCover{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.editIconCover:hover{
+    opacity: 0.5;
+}
+
+.editIconProfile{
+    position: absolute;
+    margin-left: 47%;
+    top: 207px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.editIconProfile:hover{
+    opacity: 0.5;
+}
+
+.editIconImg{
+    font-size: 20px;
+}
+
 .profileInfoName{
     font-size: 24px;
 }
 
 .profileInfoDesc{
     font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+
+.descEditWrapper{
+    display: flex;
+    align-items: center;
+}
+
+.descEditButton{
+    border: none;
+    padding: 0px;
+    background-color: white;
+    cursor: pointer;
+    color: lightgray;
+}
+
+.descEditButton:hover{
+    color: gray;
+}
+
+.descInput{
+    border: 1px solid gray;
+    padding: 2px;
+    border-radius: 3px;
+    width: 200px;
+}
+
+.descInput:focus{
+    outline: none;
+}
+
+.descEditIcon{
+    margin-left: 5px;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.descEditIcon:hover{
+    opacity: 0.5;
 }
 
 .profileInfo{

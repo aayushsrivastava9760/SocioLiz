@@ -6,10 +6,16 @@
     padding: 20px;
 }
 
-.msg{
-    font-weight: 500;
-    font-size: 20px;
+.msgBox{
     display: flex;
     align-items: center;
-    color: #555;
+    justify-content: center;
+    padding: 20px;
+}
+
+.msg{
+    font-weight: 500;
+    font-size: 25px;
+    display: flex;
+    color: grey;
 }

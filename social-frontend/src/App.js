@@ -36,6 +36,8 @@ function App() {
           
         {/* </Route> */}
         <Route path="/search" element={!user ? <Navigate to="/" /> : <Search /> } />
+
+        {/* <Route path="/details" element={user ? <Details /> : <Navigate to="/register" />} /> */}
       </Routes>
     </Router>
   );

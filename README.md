@@ -1,6 +1,38 @@
 # SocioLiz
 
-A MERN stack based social website where users can post , follow others and chat with them .
+A MERN stack social PWA(Progressive Web App) where users can post , follow others and chat with them .
+
+![GitHub last commit](https://img.shields.io/github/last-commit/aayushsrivastava9760/SozioLiz?style=flat-square)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+## Demo
+
+The app has been hosted on Netlify [here](https://socioliz.netlify.app/) . P.S: You might have to wait for a few seconds for the netlify site to respond.
+
+![Login Page](https://user-images.githubusercontent.com/81965095/159630405-c77ca550-5cec-4562-b15f-35e5f83e4b7d.jpeg)
+
+<hr>
+
+![Register Page](https://user-images.githubusercontent.com/81965095/159630665-dc110ba0-87eb-4619-9c60-1fd3a909d8de.jpeg)
+
+<hr>
+
+![Home Page](https://user-images.githubusercontent.com/81965095/159632335-899304dc-d62f-450b-9c79-be2ff93ab648.jpeg)
+
+<hr>
+
+![comments](https://user-images.githubusercontent.com/81965095/161246061-8d4ec5b0-5835-4df8-807a-b1d55eb5f916.jpeg)
+
+<hr>
+
+![Profile Page](https://user-images.githubusercontent.com/81965095/159632801-5d05fc4e-0e7b-4ab3-aaa6-7ae21fa97564.jpeg)
+
+<hr>
+
+![Messenger Page](https://user-images.githubusercontent.com/81965095/159632947-aa99a21f-3580-42d5-a0b4-a23eca221d31.jpeg)
+
+
+
 
 ### Features
 
@@ -9,6 +41,8 @@ A MERN stack based social website where users can post , follow others and chat 
 3. Users can make **posts** , **follow/unfollow** other users and **realtime chat** with friends .
 4. Users can also **post images** .
 5. Users can **search** for other users.
+6. Users can update/change their **Profile Picture**, **Cover Picture** and **Personal Info** about themelves .
+7. Users can **comment** on the posts .
 
 ### Packages
 

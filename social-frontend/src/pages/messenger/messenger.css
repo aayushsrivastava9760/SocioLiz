@@ -40,22 +40,35 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 10px;
 }
 
 .chatMessageInput{
-    width: 80%;
+    /* width: 80%;
     height: 90px;
-    padding: 10px;
+    padding: 10px; */
+    width: 89%;
+    height: 36px;
+    padding: 2px;
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 20px;
+}
+
+.chatMessageInput:focus{
+    outline: none;
 }
 
 .chatSubmitButton{
     width: 70px;
     height: 40px;
     border: none;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     cursor: pointer;
-    background-color: teal;
-    color: white;
+    background-color: white;
+    color: rgb(55, 32, 230);
+    padding-top: 15px;
 }
 
 

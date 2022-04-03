@@ -41,14 +41,14 @@ const Register = () => {
 
         // changes
 
-        try {
-          loginCall({email:email.current.value,password:password.current.value},dispatch)
-          console.log("details page");
-          window.location.href = 'http://localhost:3000/details'
-        } catch (error) {
-          console.log(error);
-        }
-        
+        // try {
+        //   loginCall({email:email.current.value,password:password.current.value},dispatch)
+        //   console.log("details page");
+          
+        // } catch (error) {
+        //   console.log(error);
+        // }
+        // window.location.href = 'http://localhost:3000/details'
       } catch (error) {
         console.log(error);
       }

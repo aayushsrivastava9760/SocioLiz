@@ -1,0 +1,50 @@
+.commentBox{
+    padding: 10px;
+}
+
+.commentWrapper{
+    padding: 10px;
+}
+
+.line{
+    margin: 5px;
+}
+
+.shareComment{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.commentProfileImg{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.commentInput{
+    border: none;
+    width: 80%;
+    font-size: 15px;
+}
+
+.commentInput:focus{
+    outline: none;
+}
+
+.submitButton{
+    cursor: pointer;
+    color: #0a71f7;
+}
+
+.comments{
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 200px;
+    overflow-y: scroll;
+}

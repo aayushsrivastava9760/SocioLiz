@@ -31,7 +31,10 @@ const Feed = ({username}) => {
         { username ? user.username === username &&  <Share /> : <Share />}
         {
         posts.length === 0 
-        ? <h2 className='msg'>No posts to display</h2>
+        ? 
+        <div className="msgBox">
+          <h2 className='msg'>No posts to display</h2>
+        </div>
         :
         posts.map(p=>
         <Post key={p._id} post={p}/>

@@ -12,6 +12,7 @@ const authRoute = require('./routes/auth')
 const postRoute = require('./routes/posts')
 const conversationRoute = require('./routes/conversations')
 const messageRoute = require('./routes/messages')
+const commentRoute = require('./routes/comments')
 
 // const multer = require("multer")
 // const path = require("path")
@@ -59,6 +60,8 @@ app.use("/api/auth",authRoute)
 app.use("/api/posts",postRoute)
 app.use("/api/conversations",conversationRoute)
 app.use("/api/messages",messageRoute)
+app.use("/api/comments",commentRoute)
+
 
 const port = process.env.PORT || 8800
 

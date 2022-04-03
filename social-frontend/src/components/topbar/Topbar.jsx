@@ -39,10 +39,12 @@ const Topbar = () => {
             <span className="topbarLink">Timeline</span>
           </div>
           <div className="topbarIcons">
+            <Link to={'/search'} style={{textDecoration:"none",color:"white"}} >
             <div className="topbarIconItem">
               <Person/>
               <span className="topbarIconBadge">1</span>
             </div>
+            </Link>
             <Link to={'/messenger'} style={{textDecoration:"none",color:"white"}}>
             <div className="topbarIconItem">
               <Chat/>

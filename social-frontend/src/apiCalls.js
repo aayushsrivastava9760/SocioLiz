@@ -25,3 +25,8 @@ export const loginCall = async (userCredential,dispatch) =>{
 export const logoutCall = (dispatch) =>{
     dispatch({type:"LOGOUT"})
 }
+
+
+export const updateCall = (userInfo,dispatch) =>{
+    dispatch({type:"LOGIN_SUCCESS",payload:userInfo})
+}

@@ -21,7 +21,8 @@ router.patch("/:id", async (req,res)=>{
             },
             {new:true,runValidators:true}
             )
-            res.status(200).json("Account has been updated")
+            // res.status(200).json("Account has been updated")
+            res.status(200).json(user)
         } catch (error) {
             return res.status(500).json(error)
         }

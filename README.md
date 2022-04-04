@@ -138,8 +138,7 @@ npm start
 
 ### Aknowledgements
 
-- Heroku buildpack used for deplotment of socket server [timanovsky/subdir-heroku-buildpack](https://github.com/timanovsky/subdir-heroku-buildpack)
-- Inspired by [Safak](https://github.com/safak)
+- Heroku buildpack used for deployment of socket server [timanovsky/subdir-heroku-buildpack](https://github.com/timanovsky/subdir-heroku-buildpack)
 
 ### Resources
 

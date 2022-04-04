@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import "./sidebar.css"
 import {RssFeed, School, Event, WorkOutline, HelpOutline, Bookmark, Group, PlayCircleFilledOutlined, Chat} from '@material-ui/icons'
-// import { Users } from '../../dummyData'
 import CloseFriend from '../closeFriend/CloseFriend'
 import axios from '../../utils/axios'
 import { AuthContext } from '../../context/AuthContext'

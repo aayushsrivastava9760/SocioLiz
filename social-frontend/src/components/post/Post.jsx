@@ -1,7 +1,6 @@
 import React, { useState,useEffect, useContext } from 'react'
 import './post.css'
 import { MoreVert } from '@material-ui/icons'
-// import axios from "axios"
 import {format} from "timeago.js"
 import {Link} from "react-router-dom"
 import { AuthContext } from '../../context/AuthContext'
@@ -18,8 +17,6 @@ const Post = ({post}) => {
   const [user,setUser] = useState({})
 
   const {user:currentUser} = useContext(AuthContext)
-
-  const PF = process.env.REACT_APP_PUBLIC_FOLDER
 
   useEffect(()=>{
     setIsLiked(post.likes.includes(currentUser._id))
@@ -70,8 +67,7 @@ const Post = ({post}) => {
           </div>
           <div className="postCenter">
               <span className="postText">{post?.desc}</span>
-              {/* {post.img && <img className='postImg' src={ PF+post.img } alt="" />} */}
-              {post.img && <img className='postImg' src={post.img.length > 100 ? post.img : PF+post.img} alt="" />}
+              {post.img && <img className='postImg' src={post.img} alt="" />}
           </div>
           <div className="postBottom">
               <div className="postBottomLeft">

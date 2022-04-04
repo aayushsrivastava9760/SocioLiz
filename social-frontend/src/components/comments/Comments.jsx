@@ -22,7 +22,6 @@ const Comments = ({post}) => {
         getComments()
     },[post?._id])
 
-    // console.log(comments);
 
     const handleSubmit = async (e) =>{
         e.preventDefault()

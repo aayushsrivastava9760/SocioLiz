@@ -8,7 +8,6 @@ import { useContext } from 'react'
 import { AuthContext } from '../../context/AuthContext'
 import { useState } from 'react'
 import { useEffect } from 'react'
-// import axios from "axios"
 import {io} from "socket.io-client"
 import axios from '../../utils/axios'
 import { Send } from "@material-ui/icons"
@@ -22,7 +21,6 @@ const Messenger = () => {
     const [conversations, setConversations] = useState([])
     const [currentChat, setCurrentChat] = useState(null)
     const [messages, setMessages] = useState([])
-    // const [socket, setSocket] = useState(null)
     const socket = useRef()
     const [newMessage, setNewMessage] = useState("")
     const [arrivalMessage, setArrivalMessage] = useState(null)
@@ -31,8 +29,6 @@ const Messenger = () => {
     const scrollRef = useRef()
 
     useEffect(()=>{
-        // socket.current = io("ws://localhost:8900")
-        // socket.current = io("https://dry-cliffs-41954.herokuapp.com/")
         socket.current = io("https://socioliz-socket.herokuapp.com/")
         socket.current.on("getMessage", data =>{
             setArrivalMessage({

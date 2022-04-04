@@ -12,7 +12,7 @@ const Details = () => {
     const country = useRef()
     const navigate = useNavigate()
 
-    const {user} = useContext(AuthContext)
+    const {user,convertBase64} = useContext(AuthContext)
 
     const submitHandler = async (e) =>{
 
@@ -52,21 +52,6 @@ const Details = () => {
                 console.log(error);
             }
         }
-    }
-
-    const convertBase64 = (imgFile) =>{
-        return new Promise((resolve,reject)=>{
-            const fileReader = new FileReader()
-            fileReader.readAsDataURL(imgFile)
-  
-            fileReader.onload = () =>{
-              resolve(fileReader.result)
-            }
-  
-            fileReader.onerror = (error) =>{
-              reject(error)
-            }
-        })
     }
 
     return (

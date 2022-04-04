@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import './register.css'
 import {Link} from "react-router-dom"
 import axios from '../../utils/axios'
@@ -15,8 +15,6 @@ const Register = () => {
 
   const [passwordValue,setPasswordValue] = useState("")
 
-  // const [errorOccurred,setErrorOccurred] = useState(false)
-  // const [errorMsg,setErrorMsg] = useState("")
 
   const [isProcessing,setIsProcessing] = useState(false)
 
@@ -24,12 +22,9 @@ const Register = () => {
 
   const handleSubmit = async (e) =>{
     e.preventDefault()
-    // setErrorOccurred(false)
 
     if(password.current.value !== passwordAgain.current.value){
       passwordAgain.current.setCustomValidity("Passwords don't match!")
-      // setErrorOccurred(true)
-      // setErrorMsg("Passwords don't match !")
     }
     else{
       setIsProcessing(true)
@@ -44,9 +39,6 @@ const Register = () => {
         dispatch({type:"LOGIN_SUCCESS",payload:res.data})
       } catch (error) {
         console.log(error);
-        // setIsProcessing(false)
-        // setErrorOccurred(true)
-        // setErrorMsg("The username or email is already taken !")
       }
 
       

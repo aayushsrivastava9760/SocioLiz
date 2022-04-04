@@ -132,6 +132,10 @@ cd social-frontend
 npm start
 ```
 
+### NOTE
+
+The app is still under production phase so if bugs are found kindly create an issue regarding the same stating the method to reproduce the bug or relevant screenshot .
+
 ## Author
 
 - **Aayush Srivastava**

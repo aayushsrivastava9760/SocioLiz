@@ -13,7 +13,7 @@ const Login = () => {
   const email = useRef()
   const password = useRef()
 
-  const { isFetching, dispatch} = useContext(AuthContext)
+  const { isFetching, dispatch, error} = useContext(AuthContext)
 
 
   const handleSubmit = (e) =>{
@@ -32,9 +32,22 @@ const Login = () => {
           </div>
           <div className="loginRight">
               <form className="loginBox" onSubmit={handleSubmit} >
-                  <input placeholder="Email" type="email" required className="loginInput" ref={email} />
-                  <input placeholder="Password" type="password" required minLength="6" className="loginInput" ref={password} />
-                  {/* <button className="loginButton" disabled={isFetching}>{ isFetching ? <CircularProgress color='white' size="25px" /> : "Log In"}</button> */}
+                  <input 
+                    placeholder="Email" 
+                    type="email" 
+                    required 
+                    className="loginInput email" 
+                    ref={email} 
+                  />
+                  <span className="errorMsgEmail">Enter a valid Email address</span>
+                  <input 
+                    placeholder="Password" 
+                    type="password" 
+                    required 
+                    minLength="6" 
+                    className="loginInput" 
+                    ref={password} 
+                  />
                   <button className="loginButton" disabled={isFetching}>{ isFetching ? <CircularProgress size="25px" /> : "Log In"}</button>
                   <span className="loginForgot">Forgot Password?</span>
                   <Link to={`/register`} style={{textDecoration:"none",textAlign:"center"}}>
@@ -43,6 +56,12 @@ const Login = () => {
                   </button>
                   </Link>
               </form>
+              { 
+                error &&
+                <div className="errorBox">
+                  <p className="errorMsg">username or password do not match !</p>
+                </div>
+              }
           </div>
       </div>
     </div>

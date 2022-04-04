@@ -2,7 +2,6 @@ import React, { useRef } from 'react'
 import "./rightbar.css"
 import { useEffect } from 'react'
 import { useState } from 'react'
-// import axios from "axios"
 import {Link} from "react-router-dom"
 import { useContext } from 'react'
 import { AuthContext } from '../../context/AuthContext'
@@ -16,7 +15,6 @@ const Rightbar = ({user}) => {
 
   const [friends, setFriends] = useState([])
   const {user:currentUser , dispatch} = useContext(AuthContext)
-  // const [followed,setFollowed] = useState(currentUser.following.includes(user?._id))
   const [followed,setFollowed] = useState()
   const [greet,setGreet] = useState(true)
   const [editCity,setEditCity] = useState(false)
@@ -93,7 +91,6 @@ const Rightbar = ({user}) => {
   }
 
   const handleGreetingMsg = async () =>{
-    // console.log("say hi pressed");
     try {
       const conversationData = {
         senderId:currentUser._id,
@@ -103,19 +100,6 @@ const Rightbar = ({user}) => {
       const newConversation = await axios.post('/conversations',conversationData)
       setGreet(false)
       console.log(newConversation);
-      // try {
-      //   const greetMessageData = {
-      //     conversationId:newConversation._id,
-      //     sender:currentUser._id,
-      //     text:""
-      //   }
-
-      //   const res = await axios.post('/messages',greetMessageData)
-        
-      //   console.log(res.data);
-      // } catch (error) {
-      //   console.log(error);
-      // }
 
     } catch (error) {
       console.log(error);
@@ -168,12 +152,6 @@ const Rightbar = ({user}) => {
           </span>
         </div>
         <img className='rightbarAd' src="/assets/gfg-ad.jpeg" alt="" />
-        {/* <h4 className="rightbarTitle">Online Friends</h4>
-        <ul className="rightbarFriendList">
-          {Users.map(u=>(
-            <Online key={u.id} user={u} />
-          ))}
-        </ul> */}
       </div>
     )
   }
@@ -272,10 +250,6 @@ const Rightbar = ({user}) => {
                 </div>
               </div>
             }
-          {/* <div className="rightbarInfoItem">
-            <span className="rightbarInfoKey">Relationship:</span>
-            <span className="rightbarInfoValue">{user.relationship === 1 ? "Single" : user.relationship === 2 ? "Married" : "-"}</span>
-          </div> */}
         </div>
         <h4 className='rightbarTitle' >User Friends</h4>
         <div className="rightbarFollowings">

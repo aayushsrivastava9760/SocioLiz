@@ -4,7 +4,6 @@ import Rightbar from '../../components/rightbar/Rightbar'
 import Sidebar from '../../components/sidebar/Sidebar'
 import Topbar from '../../components/topbar/Topbar'
 import './profile.css'
-// import axios from "axios"
 import { useParams } from "react-router-dom"
 import axios from '../../utils/axios'
 import { AuthContext } from '../../context/AuthContext'
@@ -24,7 +23,6 @@ const Profile = () => {
   const desc = useRef()
   const [user,setUser] = useState({})
   const username = useParams().username
-  // console.log(params);
 
   useEffect(()=>{
     const fetchUser = async () => {
@@ -47,7 +45,6 @@ const Profile = () => {
 
     try {
       const res = await axios.patch(`/users/${currentUser._id}`,data)
-      // window.location.reload()
       updateCall(res.data,dispatch)
     } catch (error) {
       console.log(error);
@@ -83,7 +80,6 @@ const Profile = () => {
     setEditDesc(false)
     try {
       const res = await axios.patch(`/users/${currentUser._id}`,data)
-      // window.location.reload()
       updateCall(res.data,dispatch)
     } catch (error) {
       console.log(error);

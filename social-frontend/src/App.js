@@ -22,22 +22,16 @@ function App() {
       <Routes>
         <Route path="/" element={user ? <Home /> : <Register />}/>
           
-        {/* </Route> */}
         <Route path="/login" element={ user ? <Navigate to="/" /> : <Login />} />
           
-        {/* </Route> */}
         <Route path="/register" element={user ? <Navigate to="/" /> : <Register />} />
         
-        {/* <Route path="/messenger" element={!user ? <Navigate to="/" /> : <Messenger />} /> */}
         <Route path="/messenger" element={!user ? <Navigate to="/" /> : <Messenger />} />
 
-        {/* </Route> */}
         <Route path="/profile/:username" element={!user ? <Navigate to="/" /> : <Profile />}/>
           
-        {/* </Route> */}
         <Route path="/search" element={!user ? <Navigate to="/" /> : <Search /> } />
 
-        {/* <Route path="/details" element={user ? <Details /> : <Navigate to="/register" />} /> */}
       </Routes>
     </Router>
   );

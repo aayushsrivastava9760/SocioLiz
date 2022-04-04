@@ -3,9 +3,6 @@ import "./message.css"
 import {format} from "timeago.js"
 import { useState } from 'react'
 import { useEffect } from 'react'
-// import { useContext } from 'react'
-// import { AuthContext } from '../../context/AuthContext'
-// import axios from 'axios'
 import axios from '../../utils/axios'
 
 

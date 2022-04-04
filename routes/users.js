@@ -21,7 +21,6 @@ router.patch("/:id", async (req,res)=>{
             },
             {new:true,runValidators:true}
             )
-            // res.status(200).json("Account has been updated")
             res.status(200).json(user)
         } catch (error) {
             return res.status(500).json(error)
@@ -104,7 +103,6 @@ router.patch("/:id/follow", async (req,res)=>{
     if(req.body.userId!==req.params.id){
         try {
             const followUser = await User.findOne({_id:req.params.id})
-            // const currentUser = await User.findOne({_id:req.body.userId})
             if(!followUser.followers.includes(req.body.userId)){
                 await User.findByIdAndUpdate(
                     {
@@ -146,7 +144,6 @@ router.patch("/:id/unfollow", async (req,res)=>{
     if(req.body.userId!==req.params.id){
         try {
             const unfollowUser = await User.findOne({_id:req.params.id})
-            // const currentUser = await User.findOne({_id:req.body.userId})
             if(unfollowUser.followers.includes(req.body.userId)){
                 await User.findByIdAndUpdate(
                     {

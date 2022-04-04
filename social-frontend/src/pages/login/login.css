@@ -93,3 +93,40 @@
     font-weight: 500;
     cursor: pointer;
 }
+
+.errorBox{
+    height: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.errorMsg{
+    font-size: 20px;
+    color: rgb(250, 79, 79);
+}
+
+.errorMsgEmail{
+    font-size: 15px;
+    padding: 5px;
+    color: rgb(250, 79, 79);
+    display: none;
+}
+
+.errorMsgPassword{
+    font-size: 15px;
+    padding: 5px;
+    color: rgb(250, 79, 79);
+    display: none;
+}
+
+.email:invalid ~ .errorMsgEmail{
+    display: block;
+}
+.password:invalid ~ .errorMsgPassword{
+    display: block;
+}

@@ -40,7 +40,7 @@
 }
 
 .loginBox{
-    height: 400px;
+    height: 100%;
     padding: 20px;
     background-color: white;
     border-radius: 10px;
@@ -49,12 +49,61 @@
     justify-content: space-between;
 }
 
+.errorBox{
+    height: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.errorMsgUsername{
+    font-size: 15px;
+    padding: 5px;
+    color: rgb(250, 79, 79);
+    display: none;
+}
+.errorMsgEmail{
+    font-size: 15px;
+    padding: 5px;
+    color: rgb(250, 79, 79);
+    display: none;
+}
+.errorMsgPassword{
+    font-size: 15px;
+    padding: 5px;
+    color: rgb(250, 79, 79);
+    display: none;
+}
+.errorMsgPasswordAgain{
+    font-size: 15px;
+    padding: 5px;
+    color: rgb(250, 79, 79);
+    display: none;
+}
+
 .loginInput{
     height: 50px;
     border-radius: 10px;
     border: 1px solid gray;
     font-size: 18px;
     padding-left: 20px;
+}
+
+.username:invalid ~ .errorMsgUsername{
+    display: block;
+}
+.email:invalid ~ .errorMsgEmail{
+    display: block;
+}
+.password:invalid ~ .errorMsgPassword{
+    display: block;
+}
+.passwordAgain:invalid ~ .errorMsgPasswordAgain{
+    display: block;
 }
 
 .loginInput:focus{

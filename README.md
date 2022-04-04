@@ -2,7 +2,7 @@
 
 A MERN stack social PWA(Progressive Web App) where users can post , follow others and chat with them .
 
-![GitHub last commit](https://img.shields.io/github/last-commit/aayushsrivastava9760/SozioLiz?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/aayushsrivastava9760/SocioLiz?style=flat-square)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## Demo

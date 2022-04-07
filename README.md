@@ -1,6 +1,6 @@
 # SocioLiz
 
-A MERN stack social PWA(Progressive Web App) where users can post , follow others and chat with them .
+A MERN stack Social Web App where users can post , follow others and chat with them .
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/aayushsrivastava9760/SocioLiz?style=flat-square)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
@@ -51,6 +51,7 @@ The app has been hosted on Netlify [here](https://socioliz.netlify.app/) . P.S: 
 5. Users can **search** for other users.
 6. Users can update/change their **Profile Picture**, **Cover Picture** and **Personal Info** about themelves .
 7. Users can **comment** on the posts .
+8. Register/Login takes valid input and give error messages for invalid or non-matchable credentials .
 
 ### Packages
 

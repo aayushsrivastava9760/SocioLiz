@@ -53,6 +53,36 @@ The app has been hosted on Netlify [here](https://socioliz.netlify.app/) . P.S: 
 7. Users can **comment** on the posts .
 8. Register/Login takes valid input and give error messages for invalid or non-matchable credentials .
 
+## App Usage
+
+### Pages
+
+#### 1. Home Page
+
+This is the first page which appears after logging in and it contains all the posts of the user and whoever the user follows .
+
+#### 2. Profile Page
+
+This page displays the user's profile . The user can change the default cover picture and profile picture from this page . The personal info and a short description can also be added through this page . This page diplays all of user's posts . The rightbar also displays the friends of the user ( whoever the user follows ) .
+
+#### 3. Search Page
+
+This page can be accessed by clicking on the search bar on the navbar . 
+
+#### 4. Messenger Page
+
+This page can be accessed by clicking on the messenger icon on the navbar . The user can chat / real-time chat with those users who are added on messenger ( each profile page gives you the option to add user on messenger ) . If two users are online then they can see each other as online on the right side of the messenger page .
+
+### Feature Access
+
+#### 1. Sharing a Post
+
+A user can share a post from his/her profile and home page . The user can write a post and can also add an image with the post by clicking on the photo or video button ( for now only images can be shared ) . On selecting an image the user is also given the option to cancel the selected image ( a small black cross appears over the selected image ) . On clicking the share button the post is shared .
+
+#### 2. Comments
+
+Each post has a 'comments' button , on clicking this button the comments section becomes visible and all the comments can be seen . The user can also enter a comment by writing in the input area and clicking the send icon .
+
 ### Packages
 
 - [express](https://expressjs.com/)

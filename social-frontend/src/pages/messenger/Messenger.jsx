@@ -29,7 +29,7 @@ const Messenger = () => {
     const scrollRef = useRef()
 
     useEffect(()=>{
-        socket.current = io("https://socioliz-socket.herokuapp.com/")
+        socket.current = io("https://socioliz-socket-render.onrender.com")
         socket.current.on("getMessage", data =>{
             setArrivalMessage({
                 sender: data.senderId,

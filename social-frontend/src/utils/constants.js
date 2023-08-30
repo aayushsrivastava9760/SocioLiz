@@ -1,1 +1,1 @@
-export const API_URL = "https://api-socioliz.herokuapp.com/api";
+export const API_URL = "https://socioliz-api-render.onrender.com/api";
